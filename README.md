@@ -5,7 +5,7 @@ This is a simple calculator that can handle simple math, complex math and binary
 ## Features
 
 - Simple math and binary and complex math using standard C syntax (with some extensions, XOR is missing)
-- Hidden operator: Expression like `2a` or `2(3 + 4)` are converted to `2*a` and `2*(3 + 4)` respectively
+- Hidden operator: Expressions like `2a` or `2(3 + 4)` are converted to `2*a` and `2*(3 + 4)` respectively
 - Commands: Call commands using the # symbol (available commands can be shown using `#help`)
 - Different output modes (binary, hexadecimal, octal, decimal); change the output mode using `#output bin|hex|dec|oct`
 - Variable creation: `a=3` `b=2*a`
