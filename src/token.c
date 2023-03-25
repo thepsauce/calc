@@ -61,7 +61,7 @@ gethexadecimal(U32 token)
 	while(isxdigit(*str))
 	{
 		i <<= 4;
-		i += isdigit(*str) ? *str - '0' : *str > 'a' ? *str - 'a' + 10 : *str - 'A' + 10;
+		i += isdigit(*str) ? *str - '0' : *str >= 'a' ? *str - 'a' + 10 : *str - 'A' + 10;
 		str++;
 		while(isspace(*str))
 			str++;

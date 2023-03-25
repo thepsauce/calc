@@ -6,11 +6,11 @@ SOURCE_DIR := src
 BUILD_DIR := build
 INCLUDE_DIR := include
 
-SOURCES := $(shell find $(SOURCE_DIR) -name *.c)
+SOURCES := $(shell find $(SOURCE_DIR) -name '*.c')
 OBJECTS := $(SOURCES:$(SOURCE_DIR)/%.c=$(BUILD_DIR)/%.o)
 
 $(BUILD_DIR)/prog: $(OBJECTS)
-	$(CC) $(OBJECTS) -o $@ -lcurses -lm
+	$(CC) $(OBJECTS) -o $@ -lm
 
 $(BUILD_DIR)/%.o: $(SOURCE_DIR)/%.c
 	mkdir -p $(dir $@)

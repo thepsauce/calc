@@ -630,6 +630,14 @@ compute(struct context *ctx, VALUE *value)
 		VALUE v1, v2;
 		const struct combination *comb;
 
+		if(group->type)
+		{
+			value->type = VTYPE_FLOAT;
+			value->f = 0;
+			adderror(true, "there is no support for this operator");
+			return;
+		}
+
 		comb = combinations + operations[group->type];
 		compute(ctx, &v1);
 		if(comb->t2)
