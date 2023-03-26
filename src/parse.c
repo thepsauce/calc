@@ -214,7 +214,7 @@ again:
 		I_Token++;
 		break;
 	case TMUL: case TDIV: case TPOW:
-		adderror(Tokens[I_Token].start, "invalid use of operator");
+		adderror(true, "invalid use of operator");
 		I_Token = N_Tokens;
 		return;
 	}

@@ -630,7 +630,7 @@ compute(struct context *ctx, VALUE *value)
 		VALUE v1, v2;
 		const struct combination *comb;
 
-		if(group->type)
+		if(group->type >= ARRLEN(operations))
 		{
 			value->type = VTYPE_FLOAT;
 			value->f = 0;
