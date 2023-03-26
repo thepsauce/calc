@@ -9,7 +9,7 @@ This is a simple calculator that can handle simple math, complex math and binary
 - Commands: Call commands using the # symbol (available commands can be shown using `#help`)
 - Different output modes (binary, hexadecimal, octal, decimal); change the output mode using `#output bin|hex|dec|oct`
 - Variable creation: `a=3` `b=2*a`
-- Static variable creation: `a=3` `b=2*a` (b is now equal to 6 whereas the above b is stored as `2*a`
+- Static variable creation: `a:=3` `b:=2*a` (b is now equal to 6 whereas the above b is stored as `2*a`
 - Function declaration: `f(x) = x^2` `f(x, y) = (x + y)^2`
 - System functions: System functions are implemented using C code and implemented in the calculator internally
 - Register: Access a register via `$n` where `n` is a valid number. Register are used to store past results of computations
