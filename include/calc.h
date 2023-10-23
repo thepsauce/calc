@@ -6,6 +6,7 @@
 #include <ctype.h>
 #include <limits.h>
 #include <math.h>
+#include <ncurses.h>
 #include <stdarg.h>
 #include <stdbool.h>
 #include <stdint.h>
@@ -16,9 +17,6 @@
 #define ARRLEN(a) (sizeof(a)/sizeof*(a))
 #define MIN(a, b) ((a)<(b)?(a):(b))
 #define MAX(a, b) ((a)>(b)?(a):(b))
-
-#define OK 0
-#define ERR (-1)
 
 typedef long double FLOAT;
 typedef uint8_t U8;
@@ -237,4 +235,5 @@ struct context {
 
 void printgroup(struct context *ctx);
 void compute(struct context *ctx, VALUE *value);
+
 #endif // CALC_H

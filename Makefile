@@ -10,7 +10,7 @@ SOURCES := $(shell find $(SOURCE_DIR) -name '*.c')
 OBJECTS := $(SOURCES:$(SOURCE_DIR)/%.c=$(BUILD_DIR)/%.o)
 
 $(BUILD_DIR)/prog: $(OBJECTS)
-	$(CC) $(OBJECTS) -o $@ -lm
+	$(CC) -Wall -Wextra $(OBJECTS) -o $@ -lm -lncurses
 
 $(BUILD_DIR)/%.o: $(SOURCE_DIR)/%.c
 	mkdir -p $(dir $@)
